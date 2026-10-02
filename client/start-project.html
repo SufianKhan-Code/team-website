@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Book a Website Project — @TEAM</title>
+  <meta name="description" content="Book a website project with @TEAM. Submit complete business, website, pages, features, design, content, domain, hosting, budget and timeline requirements.">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <!-- @TEAM brand identity / browser / installable app -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/brand/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="application-name" content="@TEAM">
+  <meta name="apple-mobile-web-app-title" content="@TEAM">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+  <meta property="og:site_name" content="@TEAM">
+</head>
+<body class="booking-page">
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html">@<span>TEAM</span></a>
+    <nav class="navlinks">
+      <a href="services.html">Services</a>
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="process.html">Process</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn-dark active-start" href="start-project.html">Start a Project <span class="arrow">→</span></a>
+    </nav>
+    <button class="menu" aria-label="Open navigation">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="booking-hero">
+    <div class="container booking-hero-grid">
+      <div class="booking-hero-copy reveal">
+        <span class="booking-kicker">Project Booking / Website Order Form</span>
+        <h1>Book your website.<br><em>Define it properly.</em></h1>
+        <p>This page is for clients who are ready to submit a complete website project request — business details, pages, features, content, design, domain, hosting, budget and deadline in one structured brief.</p>
+        <div class="booking-hero-actions">
+          <a class="btn booking-white-btn" href="#booking-form">Start Booking <span class="arrow">↓</span></a>
+          <a class="booking-ghost-link" href="contact.html">Just have a question? Contact us →</a>
+        </div>
+      </div>
+      <div class="booking-ticket reveal">
+        <div class="booking-ticket-head"><span>PROJECT BOOKING</span><b>@TEAM</b></div>
+        <div class="booking-ticket-body">
+          <small>WEBSITE PROJECT INTAKE</small>
+          <strong>08</strong>
+          <p>complete requirement stages</p>
+          <div class="booking-ticket-lines"><span>Client details</span><span>Website type</span><span>Pages & content</span><span>Features</span><span>Design</span><span>Domain & hosting</span><span>Budget & timeline</span><span>Review & book</span></div>
+        </div>
+        <div class="booking-ticket-foot"><span>No payment is taken on this page.</span><span>Final quote after review.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking-note">
+    <div class="container booking-note-grid reveal">
+      <div><span class="booking-kicker booking-kicker-dark">Before you book</span><h2>This is different from the Contact page.</h2></div>
+      <div><p>Use Contact for a quick question. Use this Project Booking page when you want us to understand the full website order. The more complete your brief is, the more accurately the scope, timeline and quote can be reviewed.</p><div class="booking-note-tags"><span>Detailed requirements</span><span>Saved draft</span><span>WhatsApp booking</span><span>Email copy</span></div></div>
+    </div>
+  </section>
+
+  <section class="booking-builder" id="booking-form">
+    <div class="container">
+      <div class="booking-builder-head reveal">
+        <div><span class="booking-kicker booking-kicker-dark">Website Order Builder</span><h2>Complete your project requirements.</h2></div>
+        <p>Required fields are marked with *. Your draft is saved in this browser while you complete the form.</p>
+      </div>
+
+      <div class="booking-progress reveal">
+        <div class="booking-progress-top"><span id="bookingStepLabel">Step 1 of 8</span><b id="bookingStepName">Client</b><span id="bookingPercent">12%</span></div>
+        <div class="booking-progress-track"><i id="bookingProgressBar"></i></div>
+        <div class="booking-progress-tabs" role="tablist" aria-label="Booking steps">
+          <button type="button" class="booking-tab active" data-book-step="1"><span>01</span>Client</button>
+          <button type="button" class="booking-tab" data-book-step="2"><span>02</span>Website</button>
+          <button type="button" class="booking-tab" data-book-step="3"><span>03</span>Pages</button>
+          <button type="button" class="booking-tab" data-book-step="4"><span>04</span>Features</button>
+          <button type="button" class="booking-tab" data-book-step="5"><span>05</span>Design</button>
+          <button type="button" class="booking-tab" data-book-step="6"><span>06</span>Technical</button>
+          <button type="button" class="booking-tab" data-book-step="7"><span>07</span>Budget</button>
+          <button type="button" class="booking-tab" data-book-step="8"><span>08</span>Review</button>
+        </div>
+      </div>
+
+      <div class="booking-layout">
+        <form id="websiteBookingForm" class="booking-form reveal" novalidate>
+          <section class="booking-panel active" data-book-panel="1">
+            <div class="booking-panel-head"><span>01 / CLIENT DETAILS</span><h3>Who is booking the project?</h3><p>Basic contact details so we know who the project belongs to and how you prefer to communicate.</p></div>
+            <div class="booking-fields booking-two-col">
+              <label class="booking-field"><span>Full name *</span><input name="clientName" required autocomplete="name" placeholder="Your full name"></label>
+              <label class="booking-field"><span>Email address *</span><input name="clientEmail" type="email" required autocomplete="email" placeholder="you@example.com"></label>
+              <label class="booking-field"><span>WhatsApp number *</span><input name="clientWhatsapp" type="tel" required autocomplete="tel" placeholder="+92 3XX XXXXXXX"></label>
+              <label class="booking-field"><span>Company / brand name</span><input name="company" placeholder="Optional"></label>
+              <label class="booking-field"><span>Country / city</span><input name="location" placeholder="Example: Karachi, Pakistan"></label>
+              <label class="booking-field"><span>Preferred contact method *</span><select name="contactMethod" required><option value="">Choose one</option><option>WhatsApp</option><option>Email</option><option>WhatsApp + Email</option></select></label>
+              <label class="booking-field booking-full"><span>What does your business / project do? *</span><textarea name="businessDescription" required placeholder="Briefly explain your business, service, product or idea..."></textarea></label>
+              <label class="booking-field booking-full"><span>Who is your target audience? *</span><textarea name="targetAudience" required placeholder="Who should use or visit this website?"></textarea></label>
+            </div>
+          </section>
+
+          <section class="booking-panel" data-book-panel="2">
+            <div class="booking-panel-head"><span>02 / WEBSITE TYPE</span><h3>What are we building?</h3><p>Select the closest website type and tell us whether this is a new build or an existing website project.</p></div>
+            <div class="booking-fields">
+              <div class="booking-field"><span>Website type *</span><div class="booking-choice-grid booking-choice-4">
+                <label><input type="radio" name="websiteType" value="Landing Page" required><b>Landing Page</b><small>One focused conversion page</small></label>
+                <label><input type="radio" name="websiteType" value="Portfolio Website"><b>Portfolio</b><small>Personal or professional showcase</small></label>
+                <label><input type="radio" name="websiteType" value="Business Website"><b>Business Website</b><small>Company, services and leads</small></label>
+                <label><input type="radio" name="websiteType" value="E-commerce Website"><b>E-commerce</b><small>Products, cart and checkout</small></label>
+                <label><input type="radio" name="websiteType" value="Booking / Appointment Website"><b>Booking</b><small>Appointments or reservations</small></label>
+                <label><input type="radio" name="websiteType" value="Dashboard / Admin Panel"><b>Dashboard</b><small>Internal or admin interface</small></label>
+                <label><input type="radio" name="websiteType" value="Full-Stack Web Application"><b>Web Application</b><small>Custom user workflows</small></label>
+                <label><input type="radio" name="websiteType" value="Custom / Not Sure"><b>Custom / Not Sure</b><small>We can define it together</small></label>
+              </div></div>
+              <div class="booking-two-col booking-subgrid">
+                <label class="booking-field"><span>Project status *</span><select name="projectStatus" required><option value="">Choose status</option><option>New website from scratch</option><option>Redesign an existing website</option><option>Finish an incomplete website</option><option>Add features to an existing website</option><option>Migrate / rebuild an existing website</option></select></label>
+                <label class="booking-field"><span>Existing website URL</span><input name="existingUrl" type="url" placeholder="https://"></label>
+                <label class="booking-field booking-full"><span>Main website goal *</span><textarea name="mainGoal" required placeholder="Example: generate leads, sell products, accept bookings, manage customers, showcase work..."></textarea></label>
+                <label class="booking-field booking-full"><span>What should visitors do on the website? *</span><textarea name="primaryActions" required placeholder="Example: submit a form, call, WhatsApp, buy, book, register, log in..."></textarea></label>
+              </div>
+            </div>
+          </section>
+
+          <section class="booking-panel" data-book-panel="3">
+            <div class="booking-panel-head"><span>03 / PAGES & CONTENT</span><h3>What pages should the website contain?</h3><p>Select common pages, then add anything unique to your business. You can also tell us whether your text and images are ready.</p></div>
+            <div class="booking-fields">
+              <div class="booking-field"><span>Required pages / screens *</span><div class="booking-choice-grid booking-choice-4">
+                <label><input type="checkbox" name="pages" value="Home"><b>Home</b></label>
+                <label><input type="checkbox" name="pages" value="About"><b>About</b></label>
+                <label><input type="checkbox" name="pages" value="Services"><b>Services</b></label>
+                <label><input type="checkbox" name="pages" value="Portfolio / Work"><b>Portfolio / Work</b></label>
+                <label><input type="checkbox" name="pages" value="Pricing"><b>Pricing</b></label>
+                <label><input type="checkbox" name="pages" value="Blog / News"><b>Blog / News</b></label>
+                <label><input type="checkbox" name="pages" value="FAQ"><b>FAQ</b></label>
+                <label><input type="checkbox" name="pages" value="Contact"><b>Contact</b></label>
+                <label><input type="checkbox" name="pages" value="Login / Signup"><b>Login / Signup</b></label>
+                <label><input type="checkbox" name="pages" value="User Dashboard"><b>User Dashboard</b></label>
+                <label><input type="checkbox" name="pages" value="Admin Panel"><b>Admin Panel</b></label>
+                <label><input type="checkbox" name="pages" value="Products / Shop"><b>Products / Shop</b></label>
+                <label><input type="checkbox" name="pages" value="Cart / Checkout"><b>Cart / Checkout</b></label>
+                <label><input type="checkbox" name="pages" value="Booking / Appointment"><b>Booking</b></label>
+                <label><input type="checkbox" name="pages" value="Policies / Legal"><b>Policies / Legal</b></label>
+                <label><input type="checkbox" name="pages" value="Other custom pages"><b>Other</b></label>
+              </div></div>
+              <div class="booking-two-col booking-subgrid">
+                <label class="booking-field"><span>Estimated page count</span><select name="pageCount"><option>Not sure</option><option>1 page</option><option>2–5 pages</option><option>6–10 pages</option><option>11–20 pages / screens</option><option>20+ pages / screens</option></select></label>
+                <label class="booking-field"><span>Website language</span><select name="language"><option>English</option><option>Urdu</option><option>English + Urdu</option><option>Multiple languages</option><option>Other</option></select></label>
+                <label class="booking-field"><span>Website text / copy status *</span><select name="copyStatus" required><option value="">Choose one</option><option>All text is ready</option><option>Some text is ready</option><option>I need help organizing / writing content</option><option>No content yet</option></select></label>
+                <label class="booking-field"><span>Images / media status *</span><select name="mediaStatus" required><option value="">Choose one</option><option>All images / media are ready</option><option>Some media is ready</option><option>I need image guidance</option><option>No media yet</option></select></label>
+                <label class="booking-field booking-full"><span>Custom pages / screen details</span><textarea name="customPages" placeholder="List any pages or screens not covered above..."></textarea></label>
+              </div>
+            </div>
+          </section>
+
+          <section class="booking-panel" data-book-panel="4">
+            <div class="booking-panel-head"><span>04 / FEATURES</span><h3>What should the website actually do?</h3><p>Select the functionality you expect. These choices help define backend, integrations and overall project scope.</p></div>
+            <div class="booking-fields">
+              <div class="booking-field"><span>Features & functionality</span><div class="booking-choice-grid booking-choice-3">
+                <label><input type="checkbox" name="features" value="Contact / lead forms"><b>Contact / Lead Forms</b><small>Inquiry or lead capture</small></label>
+                <label><input type="checkbox" name="features" value="WhatsApp integration"><b>WhatsApp</b><small>Click-to-chat or CTA</small></label>
+                <label><input type="checkbox" name="features" value="Login / Signup"><b>Login / Signup</b><small>User authentication</small></label>
+                <label><input type="checkbox" name="features" value="Role-based access"><b>User Roles</b><small>Admin, staff, customer</small></label>
+                <label><input type="checkbox" name="features" value="Admin dashboard"><b>Admin Dashboard</b><small>Manage users or content</small></label>
+                <label><input type="checkbox" name="features" value="CMS / content management"><b>CMS</b><small>Edit website content</small></label>
+                <label><input type="checkbox" name="features" value="Product catalog"><b>Product Catalog</b><small>Products or services listing</small></label>
+                <label><input type="checkbox" name="features" value="Cart / Checkout"><b>Cart / Checkout</b><small>Shopping workflow</small></label>
+                <label><input type="checkbox" name="features" value="Online payments"><b>Online Payments</b><small>Payment gateway</small></label>
+                <label><input type="checkbox" name="features" value="Booking / appointments"><b>Booking</b><small>Schedule appointments</small></label>
+                <label><input type="checkbox" name="features" value="Search / filters"><b>Search / Filters</b><small>Find content or records</small></label>
+                <label><input type="checkbox" name="features" value="Email / OTP"><b>Email / OTP</b><small>Verification or alerts</small></label>
+                <label><input type="checkbox" name="features" value="Notifications"><b>Notifications</b><small>System alerts</small></label>
+                <label><input type="checkbox" name="features" value="File upload"><b>File Uploads</b><small>Documents or media</small></label>
+                <label><input type="checkbox" name="features" value="Reports / analytics dashboard"><b>Reports</b><small>Charts and business data</small></label>
+                <label><input type="checkbox" name="features" value="Google Maps"><b>Google Maps</b><small>Locations or directions</small></label>
+                <label><input type="checkbox" name="features" value="Social media integration"><b>Social Integration</b><small>Profiles or embeds</small></label>
+                <label><input type="checkbox" name="features" value="Third-party API integration"><b>API Integration</b><small>External services</small></label>
+                <label><input type="checkbox" name="features" value="SEO setup"><b>SEO Setup</b><small>Core on-page structure</small></label>
+                <label><input type="checkbox" name="features" value="Analytics / tracking"><b>Analytics</b><small>Visitor measurement</small></label>
+                <label><input type="checkbox" name="features" value="Multi-language"><b>Multi-language</b><small>More than one language</small></label>
+              </div></div>
+              <label class="booking-field"><span>Other special features / workflows</span><textarea name="featureNotes" placeholder="Explain anything custom: calculations, approvals, subscriptions, integrations, dashboards, automation, etc."></textarea></label>
+            </div>
+          </section>
+
+          <section class="booking-panel" data-book-panel="5">
+            <div class="booking-panel-head"><span>05 / DESIGN & BRAND</span><h3>How should the website look and feel?</h3><p>Share your visual direction, branding status and any websites you like.</p></div>
+            <div class="booking-fields booking-two-col">
+              <label class="booking-field"><span>Design status *</span><select name="designStatus" required><option value="">Choose one</option><option>No design yet — design it for me</option><option>I have rough ideas / sketches</option><option>I have Figma / Adobe XD design</option><option>I have an existing website to redesign</option></select></label>
+              <label class="booking-field"><span>Logo status *</span><select name="logoStatus" required><option value="">Choose one</option><option>Logo is ready</option><option>Logo needs improvement</option><option>No logo yet</option><option>Logo not required</option></select></label>
+              <label class="booking-field"><span>Brand colors</span><input name="brandColors" placeholder="Example: Black, white, #FF6B00"></label>
+              <label class="booking-field"><span>Preferred visual style *</span><select name="visualStyle" required><option value="">Choose one</option><option>Minimal / clean</option><option>Premium / luxury</option><option>Modern corporate</option><option>Bold / creative</option><option>Dark / tech</option><option>Light / editorial</option><option>Colorful / playful</option><option>Not sure — recommend one</option></select></label>
+              <label class="booking-field booking-full"><span>Reference websites / inspiration</span><textarea name="references" placeholder="Paste links to websites, Behance, Dribbble or designs you like. Mention what you like about each one."></textarea></label>
+              <label class="booking-field booking-full"><span>Design notes</span><textarea name="designNotes" placeholder="Anything to avoid? Specific fonts, spacing, animations, layout direction, brand rules, etc."></textarea></label>
+            </div>
+          </section>
+
+          <section class="booking-panel" data-book-panel="6">
+            <div class="booking-panel-head"><span>06 / DOMAIN, HOSTING & TECHNICAL</span><h3>What is already set up?</h3><p>These details help us understand launch requirements and whether setup or migration is needed.</p></div>
+            <div class="booking-fields booking-two-col">
+              <label class="booking-field"><span>Do you own a domain? *</span><select name="domainStatus" required><option value="">Choose one</option><option>Yes — domain is ready</option><option>No — I need help choosing / buying one</option><option>Not sure</option></select></label>
+              <label class="booking-field"><span>Do you have hosting? *</span><select name="hostingStatus" required><option value="">Choose one</option><option>Yes — hosting is ready</option><option>No — I need deployment / hosting help</option><option>Not sure</option></select></label>
+              <label class="booking-field"><span>Existing domain</span><input name="domainName" placeholder="example.com"></label>
+              <label class="booking-field"><span>Hosting / platform</span><input name="hostingProvider" placeholder="Vercel, Netlify, cPanel, Hostinger, etc."></label>
+              <label class="booking-field"><span>Business email needed?</span><select name="businessEmail"><option>Not sure</option><option>Yes</option><option>No</option><option>Already have it</option></select></label>
+              <label class="booking-field"><span>Maintenance after launch?</span><select name="maintenance"><option>Not sure</option><option>Yes — monthly maintenance</option><option>Yes — occasional support</option><option>No — handover only</option></select></label>
+              <label class="booking-field booking-full"><span>Existing technology / access details (do not send passwords)</span><textarea name="technicalNotes" placeholder="Example: WordPress site, React frontend, existing API, current hosting provider, database type, etc. Do not include passwords or secret keys."></textarea></label>
+              <div class="booking-security-note booking-full"><b>Security note</b><p>Never submit passwords, OTPs, API secret keys or payment credentials in this form. Access can be shared securely later if the project is accepted.</p></div>
+            </div>
+          </section>
+
+          <section class="booking-panel" data-book-panel="7">
+            <div class="booking-panel-head"><span>07 / BUDGET & TIMELINE</span><h3>When do you need it, and what budget are we working with?</h3><p>Budget and timing help us recommend a realistic scope and delivery approach.</p></div>
+            <div class="booking-fields booking-two-col">
+              <label class="booking-field"><span>Estimated budget *</span><select name="budget" required><option value="">Select budget</option><option>Under $300</option><option>$300 – $700</option><option>$700 – $1,500</option><option>$1,500 – $3,000</option><option>$3,000 – $5,000</option><option>$5,000+</option><option>Need help estimating</option></select></label>
+              <label class="booking-field"><span>Preferred timeline *</span><select name="timeline" required><option value="">Select timeline</option><option>1–2 weeks</option><option>2–4 weeks</option><option>1–2 months</option><option>2–3 months</option><option>3+ months</option><option>Flexible / not decided</option></select></label>
+              <label class="booking-field"><span>Target launch date</span><input name="launchDate" type="date"></label>
+              <label class="booking-field"><span>How soon can you start?</span><select name="startReadiness"><option>Immediately</option><option>Within 1 week</option><option>Within 2–4 weeks</option><option>Later / planning only</option></select></label>
+              <label class="booking-field"><span>Who approves the project?</span><select name="approval"><option>I am the decision maker</option><option>One other person</option><option>Small team</option><option>Multiple stakeholders</option></select></label>
+              <label class="booking-field"><span>Best time to contact you</span><input name="bestTime" placeholder="Example: 6 PM – 9 PM PKT"></label>
+              <label class="booking-field booking-full"><span>Anything else we should know?</span><textarea name="finalNotes" placeholder="Deadline reason, constraints, special business rules, future plans, files you can provide, etc."></textarea></label>
+            </div>
+          </section>
+
+          <section class="booking-panel" data-book-panel="8">
+            <div class="booking-panel-head"><span>08 / REVIEW & BOOK</span><h3>Review your website order.</h3><p>Check the summary below. This submits a booking request — it does not charge you or automatically confirm the final price.</p></div>
+            <div id="bookingReview" class="booking-review"></div>
+            <label class="booking-confirm"><input id="bookingConsent" type="checkbox" required><span>I confirm the information is accurate and understand that the final scope, price and delivery plan are confirmed after @TEAM reviews this booking request.</span></label>
+            <div class="booking-final-actions booking-final-actions-backend">
+              <button id="bookDirect" type="button" class="booking-direct-btn">Book Order Now <span>→</span></button>
+              <button id="bookWhatsapp" type="button" class="booking-whatsapp-btn">WhatsApp Copy <span>↗</span></button>
+              <button id="bookEmail" type="button" class="booking-email-btn">Email Copy <span>↗</span></button>
+            </div>
+            <div id="bookingSuccess" class="booking-success" hidden></div>
+            <p class="booking-final-note" id="bookingMessage" aria-live="polite"></p>
+          </section>
+
+          <div class="booking-form-nav">
+            <button id="bookingBack" class="booking-nav-btn" type="button" disabled>← Back</button>
+            <span id="bookingSaveStatus">Draft saved automatically.</span>
+            <button id="bookingNext" class="booking-nav-btn booking-next-btn" type="button">Continue →</button>
+          </div>
+        </form>
+
+        <aside class="booking-sidebar reveal">
+          <div class="booking-side-card booking-side-dark">
+            <span class="booking-kicker">Booking Summary</span>
+            <div id="bookingSidebarSummary"><strong>Untitled website</strong><p>Complete the form to build your order summary.</p></div>
+          </div>
+          <div class="booking-side-card">
+            <span class="booking-kicker booking-kicker-dark">Required for a good website brief</span>
+            <ul class="booking-checklist">
+              <li><span>01</span>Business & target audience</li>
+              <li><span>02</span>Website type & purpose</li>
+              <li><span>03</span>Pages & content status</li>
+              <li><span>04</span>Features & integrations</li>
+              <li><span>05</span>Design & brand direction</li>
+              <li><span>06</span>Domain & hosting status</li>
+              <li><span>07</span>Budget & deadline</li>
+            </ul>
+          </div>
+          <div class="booking-side-card booking-side-contact">
+            <span class="booking-kicker booking-kicker-dark">Need help before booking?</span>
+            <h3>Ask first.</h3>
+            <p>If you are unsure about what you need, use the Contact page or message us directly on WhatsApp.</p>
+            <a href="https://wa.me/923322905725" target="_blank" rel="noopener noreferrer">WhatsApp: 0332 2905725 →</a>
+            <a href="contact.html">Open Contact page →</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking-after">
+    <div class="container">
+      <div class="booking-after-head reveal"><div><span class="booking-kicker booking-kicker-dark">After You Book</span><h2>What happens to your request?</h2></div><p>A project booking is the starting point for scope review — not an instant contract or automatic payment.</p></div>
+      <div class="booking-after-grid">
+        <article class="reveal"><span>01</span><h3>Brief review</h3><p>We review your business goal, website type, pages, functionality and technical setup.</p></article>
+        <article class="reveal"><span>02</span><h3>Clarification</h3><p>If anything important is missing, we contact you before finalizing scope.</p></article>
+        <article class="reveal"><span>03</span><h3>Scope & quote</h3><p>The final deliverables, price, milestones and estimated timeline are defined.</p></article>
+        <article class="reveal"><span>04</span><h3>Confirmation</h3><p>Development starts after both sides agree on the project scope and working terms.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking-final-strip">
+    <div class="container booking-final-strip-grid reveal">
+      <div><span class="booking-kicker">Quick question instead?</span><h2>Use Contact for conversation.<br>Use Booking for an order.</h2></div>
+      <div><p>Contact is for questions and early discussion. Start a Project is now a full website booking brief for clients who want to submit requirements properly.</p><a class="btn booking-white-btn" href="contact.html">Open Contact Page →</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="logo">@<span>TEAM</span></div><p>Design. Develop. Support. Grow.</p><p style="margin-top:8px">A digital services partner for modern businesses.</p></div>
+      <div class="footer-links"><strong>Explore</strong><a href="services.html">Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="process.html">Process</a></div>
+      <div class="footer-links"><strong>Contact</strong><a href="mailto:teamfordeveloper@gmail.com">teamfordeveloper@gmail.com</a><a href="https://wa.me/923322905725" target="_blank" rel="noopener noreferrer">WhatsApp: 0332 2905725</a><a href="start-project.html">Book a project</a></div>
+    </div>
+    <div class="footer-bottom"><span>© <span data-year></span> @TEAM.</span><span class="footer-meta-links"><a class="admin-entry-link" href="admin.html" aria-label="Admin Login">Admin Login</a><span>Privacy Policy</span><span>Terms of Service</span></span></div>
+  </div>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

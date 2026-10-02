@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin — @TEAM</title>
+  <meta name="description" content="Private @TEAM admin dashboard for project bookings and contact messages.">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <!-- @TEAM brand identity / browser / installable app -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/brand/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="application-name" content="@TEAM">
+  <meta name="apple-mobile-web-app-title" content="@TEAM">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+  <meta property="og:site_name" content="@TEAM">
+</head>
+<body class="admin-page">
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html">@<span>TEAM</span></a>
+    <nav class="navlinks">
+      <a href="index.html">Website</a>
+      <a href="start-project.html">Booking Form</a>
+      <a href="contact.html">Contact</a>
+      <a class="active-nav" href="admin.html">Admin</a>
+    </nav>
+    <button class="menu" aria-label="Open navigation">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="admin-hero">
+    <div class="container admin-hero-grid">
+      <div>
+        <span class="admin-kicker">Private Area / @TEAM</span>
+        <h1>Admin<br>Operations.</h1>
+      </div>
+      <div>
+        <p>Review website orders, client requirements and contact messages from one protected dashboard.</p>
+        <a class="admin-back-link" href="index.html">← Back to public website</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="admin-security-strip">
+    <div class="container">
+      <span>Protected with admin authentication</span>
+      <span>Orders stored in MongoDB</span>
+      <span>Private internal notes</span>
+    </div>
+  </div>
+
+  <section class="admin-main container">
+    <section id="adminLogin" class="admin-login-shell">
+      <div class="admin-login-aside">
+        <span class="admin-kicker">Admin Access</span>
+        <h2>Sign in to manage your website.</h2>
+        <p>Use the credentials configured in your server <code>.env</code> file. This area is not available to clients.</p>
+        <div class="admin-login-points">
+          <span>01 — Review new project bookings</span>
+          <span>02 — Manage order status</span>
+          <span>03 — Read contact messages</span>
+          <span>04 — Add private admin notes</span>
+        </div>
+      </div>
+
+      <div class="admin-login-card">
+        <span class="admin-kicker">Secure Login</span>
+        <h2>Welcome back.</h2>
+        <p>Enter your admin email and password.</p>
+        <form id="adminLoginForm">
+          <label>Email
+            <input name="email" type="email" required autocomplete="username" placeholder="admin@example.com">
+          </label>
+          <label>Password
+            <input name="password" type="password" required autocomplete="current-password" placeholder="••••••••••••">
+          </label>
+          <button class="btn btn-dark" type="submit">Open Dashboard <span class="arrow">→</span></button>
+          <p id="adminLoginMsg" class="admin-login-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="adminDashboard" hidden>
+      <div class="admin-head">
+        <div>
+          <span class="admin-kicker">@TEAM Operations</span>
+          <h1>Bookings Dashboard</h1>
+          <p>Manage incoming project orders and messages.</p>
+        </div>
+        <div class="admin-head-actions">
+          <a href="start-project.html" class="btn btn-light">Open Booking Form</a>
+          <button id="adminLogout" class="btn btn-dark">Logout</button>
+        </div>
+      </div>
+
+      <div id="adminStats" class="admin-stats"></div>
+
+      <div class="admin-tabs" role="tablist" aria-label="Admin dashboard sections">
+        <button class="active" data-admin-tab="orders" type="button">Project Orders</button>
+        <button data-admin-tab="messages" type="button">Contact Messages</button>
+      </div>
+
+      <div id="ordersPanel" class="admin-panel">
+        <div class="admin-panel-heading">
+          <div><span class="admin-kicker">Orders</span><h2>Website project bookings</h2></div>
+          <div class="admin-toolbar">
+            <select id="orderStatusFilter" aria-label="Filter order status">
+              <option value="">All order statuses</option>
+              <option>new</option>
+              <option>reviewed</option>
+              <option>contacted</option>
+              <option>quoted</option>
+              <option>accepted</option>
+              <option>in_progress</option>
+              <option>completed</option>
+              <option>rejected</option>
+            </select>
+            <button id="refreshOrders" class="btn btn-light" type="button">Refresh</button>
+          </div>
+        </div>
+        <div id="ordersList" class="admin-list"></div>
+      </div>
+
+      <div id="messagesPanel" class="admin-panel" hidden>
+        <div class="admin-panel-heading">
+          <div><span class="admin-kicker">Inbox</span><h2>Contact messages</h2></div>
+          <div class="admin-toolbar">
+            <button id="refreshMessages" class="btn btn-light" type="button">Refresh</button>
+          </div>
+        </div>
+        <div id="messagesList" class="admin-list"></div>
+      </div>
+    </section>
+  </section>
+</main>
+
+<div id="adminModal" class="admin-modal" hidden>
+  <div class="admin-modal-card">
+    <button id="adminModalClose" class="admin-modal-close" type="button" aria-label="Close">×</button>
+    <div id="adminModalBody"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo">@<span>TEAM</span></div>
+        <p>Private administration area.</p>
+        <p style="margin-top:8px">Return to the public website when management work is complete.</p>
+      </div>
+      <div class="footer-links">
+        <strong>Website</strong>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="work.html">Work</a>
+      </div>
+      <div class="footer-links">
+        <strong>Admin</strong>
+        <a href="start-project.html">Booking Form</a>
+        <a href="contact.html">Contact Page</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> @TEAM.</span>
+      <span class="footer-meta-links"><a class="admin-entry-link active-admin-entry" href="admin.html">Admin</a><span>Private Dashboard</span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script src="assets/admin.js"></script>
+</body>
+</html>

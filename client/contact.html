@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — @TEAM</title>
+  <meta name="description" content="Contact @TEAM for UI/UX, websites, business software, full-stack applications, deployment and maintenance projects.">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <!-- @TEAM brand identity / browser / installable app -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/brand/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="application-name" content="@TEAM">
+  <meta name="apple-mobile-web-app-title" content="@TEAM">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+  <meta property="og:site_name" content="@TEAM">
+</head>
+<body class="contact-page">
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html">@<span>TEAM</span></a>
+    <nav class="navlinks">
+      <a href="services.html">Services</a>
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="process.html">Process</a>
+      <a class="active-nav" href="contact.html">Contact</a>
+      <a class="btn btn-dark" href="start-project.html">Start a Project <span class="arrow">→</span></a>
+    </nav>
+    <button class="menu" aria-label="Open navigation">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="contact-hero">
+    <div class="container">
+      <div class="contact-hero-grid">
+        <div class="reveal">
+          <span class="contact-kicker">Contact / General Inquiries</span>
+          <h1>Let’s talk about<br>what you need.</h1>
+        </div>
+        <div class="contact-hero-side reveal">
+          <p>Use this page for questions, early project discussion or direct contact. If you are ready to submit a complete website order with all requirements, use the separate Start a Project booking page.</p>
+          <div class="contact-hero-actions">
+            <a class="btn btn-dark" href="#project-form">Send a Message <span class="arrow">↓</span></a>
+            <a class="contact-email-link" href="https://wa.me/923322905725" target="_blank" rel="noopener noreferrer">WhatsApp: 0332 2905725 ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-overview reveal">
+        <div><strong>05</strong><span>Service categories</span></div>
+        <div><strong>03</strong><span>Developers</span></div>
+        <div><strong>Clear scope</strong><span>Before final pricing</span></div>
+        <div class="contact-overview-dark"><strong>Project brief</strong><span>Best way to start</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-main" id="project-form">
+    <div class="container contact-main-grid">
+      <div class="contact-form-wrap reveal">
+        <div class="contact-form-head">
+          <span class="contact-index">01</span>
+          <span class="contact-kicker">Project Brief</span>
+          <h2>Give us the important details.</h2>
+          <p>The more context you share, the easier it is to understand the project accurately. Required fields are marked with *.</p>
+        </div>
+
+        <form id="projectContactForm" class="project-contact-form">
+          <div class="contact-field">
+            <label for="contactName">Your name *</label>
+            <input id="contactName" name="name" type="text" autocomplete="name" required placeholder="Muhammed Sufiyan">
+          </div>
+          <div class="contact-field">
+            <label for="contactEmail">Email address *</label>
+            <input id="contactEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+          </div>
+          <div class="contact-field">
+            <label for="contactCompany">Company / brand</label>
+            <input id="contactCompany" name="company" type="text" placeholder="Optional">
+          </div>
+          <div class="contact-field">
+            <label for="contactWebsite">Existing website / reference link</label>
+            <input id="contactWebsite" name="website" type="url" placeholder="https://">
+          </div>
+          <div class="contact-field">
+            <label for="contactService">Service *</label>
+            <select id="contactService" name="service" required>
+              <option value="" selected disabled>Select a service</option>
+              <option>UI/UX Design</option>
+              <option>Frontend & Website Development</option>
+              <option>Business Software</option>
+              <option>Full-Stack Application</option>
+              <option>Support & Maintenance</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="contact-field">
+            <label for="contactBudget">Estimated budget</label>
+            <select id="contactBudget" name="budget">
+              <option value="" selected>Choose a range</option>
+              <option>Under $300</option>
+              <option>$300 – $700</option>
+              <option>$700 – $1,500</option>
+              <option>$1,500 – $3,000</option>
+              <option>$3,000 – $5,000</option>
+              <option>$5,000+</option>
+              <option>Need help estimating</option>
+            </select>
+          </div>
+          <div class="contact-field">
+            <label for="contactTimeline">Preferred timeline</label>
+            <select id="contactTimeline" name="timeline">
+              <option value="" selected>Choose a timeline</option>
+              <option>As soon as possible</option>
+              <option>Within 2–4 weeks</option>
+              <option>Within 1–2 months</option>
+              <option>Within 3+ months</option>
+              <option>Flexible / not decided</option>
+            </select>
+          </div>
+          <div class="contact-field">
+            <label for="contactStage">Current project stage</label>
+            <select id="contactStage" name="stage">
+              <option value="" selected>Choose a stage</option>
+              <option>Just an idea</option>
+              <option>Requirements are ready</option>
+              <option>Design / Figma is ready</option>
+              <option>Existing website needs redesign</option>
+              <option>Existing product needs fixes / features</option>
+            </select>
+          </div>
+          <div class="contact-field contact-field-full">
+            <label for="contactProject">Project summary *</label>
+            <textarea id="contactProject" name="project" required placeholder="What are you building, who will use it, and what should it help them do?"></textarea>
+          </div>
+          <div class="contact-field contact-field-full">
+            <label for="contactFeatures">Key features / requirements</label>
+            <textarea id="contactFeatures" name="features" placeholder="Example: login, admin dashboard, payments, booking, reports, responsive design, API integration..."></textarea>
+          </div>
+          <div class="contact-field contact-field-full">
+            <label class="contact-consent">
+              <input type="checkbox" id="contactConsent" required>
+              <span>I understand that the final quote is confirmed after the complete project scope is reviewed.</span>
+            </label>
+          </div>
+          <div class="contact-submit-row contact-field-full">
+            <button class="btn btn-dark contact-submit" type="submit">Send Message <span class="arrow">→</span></button>
+            <p id="projectFormMsg" class="contact-form-msg" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+
+      <aside class="contact-sidebar reveal">
+        <div class="contact-side-card contact-side-card-dark">
+          <span class="contact-kicker">Direct Contact</span>
+          <h3>Email or WhatsApp.</h3>
+          <p>For a quick question or early discussion, contact @TEAM directly through either channel.</p>
+          <a href="mailto:teamfordeveloper@gmail.com">teamfordeveloper@gmail.com <span>↗</span></a>
+          <a href="https://wa.me/923322905725" target="_blank" rel="noopener noreferrer">WhatsApp: 0332 2905725 <span>↗</span></a>
+          <button class="copy-email" type="button" data-copy-email="teamfordeveloper@gmail.com">Copy email</button>
+        </div>
+
+        <div class="contact-side-card">
+          <span class="contact-kicker">Best Brief Includes</span>
+          <ul class="contact-check-list">
+            <li><span>01</span>Project goal and audience</li>
+            <li><span>02</span>Required pages or modules</li>
+            <li><span>03</span>Important features</li>
+            <li><span>04</span>Reference websites or designs</li>
+            <li><span>05</span>Budget range and deadline</li>
+          </ul>
+        </div>
+
+        <div class="contact-side-card contact-side-note">
+          <span class="contact-kicker">Not sure about scope?</span>
+          <h3>That’s okay.</h3>
+          <p>Choose “Not sure yet” in the service field and describe the business problem. The right category can be identified from the requirements.</p>
+          <a href="services.html">Explore services →</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="contact-next">
+    <div class="container">
+      <div class="contact-section-head reveal">
+        <div>
+          <span class="contact-index">02</span>
+          <span class="contact-kicker">What Happens Next</span>
+          <h2>From your message to a clear starting point.</h2>
+        </div>
+        <p>We do not jump to a final price from a one-line message. The project is first understood, clarified and scoped.</p>
+      </div>
+      <div class="contact-next-grid">
+        <article class="reveal"><span>01</span><h3>We review the brief</h3><p>Your goal, required features, references, budget and timeline are reviewed together.</p></article>
+        <article class="reveal"><span>02</span><h3>We clarify requirements</h3><p>If important details are missing, the scope is clarified before pricing is finalized.</p></article>
+        <article class="reveal"><span>03</span><h3>We define scope</h3><p>Pages, modules, workflows, integrations and deliverables are organized into a buildable plan.</p></article>
+        <article class="reveal"><span>04</span><h3>We confirm quote & start</h3><p>Once the scope is understood, the final project quote and delivery plan can be agreed.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-fit">
+    <div class="container contact-fit-grid">
+      <div class="reveal">
+        <span class="contact-index">03</span>
+        <span class="contact-kicker">Project Fit</span>
+        <h2>What you can contact us for.</h2>
+        <p>We work across the main stages of modern web products, from early interface planning to full-stack implementation and ongoing support.</p>
+        <a class="btn btn-dark" href="services.html">View Services & Pricing →</a>
+      </div>
+      <div class="contact-fit-list reveal">
+        <a href="services.html#uiux"><span>01</span><strong>UI/UX Design</strong><i>→</i></a>
+        <a href="services.html#frontend"><span>02</span><strong>Frontend & Websites</strong><i>→</i></a>
+        <a href="services.html#business"><span>03</span><strong>Business Software</strong><i>→</i></a>
+        <a href="services.html#fullstack"><span>04</span><strong>Full-Stack Applications</strong><i>→</i></a>
+        <a href="services.html#support"><span>05</span><strong>Support & Maintenance</strong><i>→</i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-faq">
+    <div class="container">
+      <div class="contact-section-head reveal">
+        <div>
+          <span class="contact-index">04</span>
+          <span class="contact-kicker">Before You Contact</span>
+          <h2>Common project questions.</h2>
+        </div>
+        <p>A few quick answers about pricing, existing websites, design files and how project scope is handled.</p>
+      </div>
+      <div class="contact-faq-list reveal">
+        <details>
+          <summary>Can I get a final price before sharing full requirements? <span>+</span></summary>
+          <p>The website shows starting ranges, but a final quote depends on the actual scope, features, users, integrations, revisions and deadline.</p>
+        </details>
+        <details>
+          <summary>Can I contact you if I only have an idea? <span>+</span></summary>
+          <p>Yes. Describe the business problem, intended users and the main outcome you want. The scope can then be organized into practical features and phases.</p>
+        </details>
+        <details>
+          <summary>Can you work from an existing Figma design? <span>+</span></summary>
+          <p>Yes. Figma-to-responsive-website work is included within the frontend service offering.</p>
+        </details>
+        <details>
+          <summary>Can you improve an existing website or application? <span>+</span></summary>
+          <p>Yes. Website redesign, bug fixes, feature fixes, deployment and ongoing maintenance are part of the listed services.</p>
+        </details>
+        <details>
+          <summary>What if the project grows after we start? <span>+</span></summary>
+          <p>New modules, users, reports, integrations or automation can change the scope. Those changes should be reviewed before being added to the agreed work.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-final">
+    <div class="container contact-final-grid reveal">
+      <div>
+        <span class="contact-kicker">Ready When You Are</span>
+        <h2>Start with the brief.<br>We’ll take it from there.</h2>
+      </div>
+      <div>
+        <p>Use the form above or email the team directly with your project details and references.</p>
+        <a class="btn btn-light" href="#project-form">Start Your Brief <span class="arrow">↑</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="logo">@<span>TEAM</span></div><p>Design. Develop. Support. Grow.</p><p style="margin-top:8px">A digital services partner for modern businesses.</p></div>
+      <div class="footer-links"><strong>Explore</strong><a href="services.html">Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="process.html">Process</a></div>
+      <div class="footer-links"><strong>Contact</strong><a href="mailto:teamfordeveloper@gmail.com">teamfordeveloper@gmail.com</a><a href="https://wa.me/923322905725" target="_blank" rel="noopener noreferrer">WhatsApp: 0332 2905725</a><a href="start-project.html">Start a project</a></div>
+    </div>
+    <div class="footer-bottom"><span>© <span data-year></span> @TEAM.</span><span class="footer-meta-links"><a class="admin-entry-link" href="admin.html" aria-label="Admin Login">Admin Login</a><span>Privacy Policy</span><span>Terms of Service</span></span></div>
+  </div>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>
