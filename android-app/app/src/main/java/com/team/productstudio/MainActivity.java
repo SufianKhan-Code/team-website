@@ -1,5 +1,4 @@
-\
-    package com.team.productstudio;
+package com.team.productstudio;
 
     import android.app.Activity;
     import android.content.ActivityNotFoundException;
