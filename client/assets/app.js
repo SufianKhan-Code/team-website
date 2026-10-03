@@ -1,4 +1,10 @@
-const b=document.querySelector('.menu'),n=document.querySelector('.navlinks');if(b)b.onclick=()=>n.classList.toggle('open');document.querySelectorAll('.navlinks a').forEach(a=>a.onclick=()=>n?.classList.remove('open'));const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('show')),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>io.observe(e));document.querySelectorAll('[data-year]').forEach(e=>e.textContent=new Date().getFullYear());const f=document.querySelector('#contactForm');if(f)f.onsubmit=async e=>{e.preventDefault();const msg=document.querySelector('#formMsg');if(!f.checkValidity()){f.reportValidity();return;}const data=Object.fromEntries(new FormData(f).entries());data.stage='Quick homepage inquiry';data.features='';data.company='';data.website='';data.timeline=data.budget||'';try{if(msg)msg.textContent='Sending…';const r=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});const out=await r.json();if(!r.ok)throw new Error(out.message||'Could not send your message.');if(msg)msg.textContent=`Sent successfully. Reference: ${out.ticketId}`;f.reset();}catch(err){if(msg)msg.textContent=`${err.message} You can also contact us at teamfordeveloper@gmail.com.`;}}
+const b=document.querySelector('.menu'),n=document.querySelector('.navlinks');
+let navBackdrop=document.querySelector('.mobile-nav-backdrop');
+if(!navBackdrop){navBackdrop=document.createElement('button');navBackdrop.type='button';navBackdrop.className='mobile-nav-backdrop';navBackdrop.setAttribute('aria-label','Close navigation');document.body.appendChild(navBackdrop);}
+const closeMobileNav=()=>{if(!n)return;n.classList.remove('open');document.body.classList.remove('nav-open');b?.setAttribute('aria-expanded','false');b?.setAttribute('aria-label','Open navigation');navBackdrop?.classList.remove('show');};
+const openMobileNav=()=>{if(!n)return;n.classList.add('open');document.body.classList.add('nav-open');b?.setAttribute('aria-expanded','true');b?.setAttribute('aria-label','Close navigation');navBackdrop?.classList.add('show');};
+if(b&&n){b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open navigation');b.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();n.classList.contains('open')?closeMobileNav():openMobileNav();});navBackdrop.addEventListener('click',closeMobileNav);document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMobileNav();});window.addEventListener('resize',()=>{if(innerWidth>980)closeMobileNav();},{passive:true});}
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',closeMobileNav));const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('show')),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>io.observe(e));document.querySelectorAll('[data-year]').forEach(e=>e.textContent=new Date().getFullYear());const f=document.querySelector('#contactForm');if(f)f.onsubmit=async e=>{e.preventDefault();const msg=document.querySelector('#formMsg');if(!f.checkValidity()){f.reportValidity();return;}const data=Object.fromEntries(new FormData(f).entries());data.stage='Quick homepage inquiry';data.features='';data.company='';data.website='';data.timeline=data.budget||'';try{if(msg)msg.textContent='Sending…';const r=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});const out=await r.json();if(!r.ok)throw new Error(out.message||'Could not send your message.');if(msg)msg.textContent=`Sent successfully. Reference: ${out.ticketId}`;f.reset();}catch(err){if(msg)msg.textContent=`${err.message} You can also contact us at teamfordeveloper@gmail.com.`;}}
 
 // Contact page: submit the inquiry directly to the backend.
 const projectContactForm = document.querySelector('#projectContactForm');
@@ -425,3 +431,52 @@ if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
     navigator.serviceWorker.register('/service-worker.js').catch(() => {});
   });
 }
+
+
+// Keep sticky service/category navigation usable on phones and highlight the current section.
+(() => {
+  const rail = document.querySelector('.svc-nav, .category-jump');
+  if (!rail) return;
+  const links = [...rail.querySelectorAll('a[href^="#"]')];
+  const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const activate = id => {
+    links.forEach(a => a.classList.toggle('mobile-current', a.getAttribute('href') === `#${id}`));
+    // Tabs are fixed-width on mobile now; no carousel auto-centering is needed.
+  };
+  links.forEach(a => a.addEventListener('click', () => {
+    const id = a.getAttribute('href').slice(1);
+    activate(id);
+  }));
+  if ('IntersectionObserver' in window && sections.length) {
+    const observer = new IntersectionObserver(entries => {
+      const visible = entries.filter(e => e.isIntersecting).sort((a,b) => b.intersectionRatio-a.intersectionRatio)[0];
+      if (visible?.target?.id) activate(visible.target.id);
+    }, {rootMargin:'-30% 0px -55% 0px', threshold:[0,.15,.35,.6]});
+    sections.forEach(s => observer.observe(s));
+  }
+})();
+
+
+// Process page compact accordion. Desktop keeps every stage readable; mobile opens one stage at a time.
+(() => {
+  const cards=[...document.querySelectorAll('.process-step-card')];
+  if(!cards.length) return;
+  const setCard=(card,open)=>{
+    card.classList.toggle('is-open',open);
+    const btn=card.querySelector('.process-step-toggle');
+    const plus=card.querySelector('.process-step-plus');
+    btn?.setAttribute('aria-expanded',String(open));
+    if(plus) plus.textContent=open?'−':'+';
+  };
+  cards.forEach(card=>{
+    const btn=card.querySelector('.process-step-toggle');
+    btn?.addEventListener('click',()=>{
+      const willOpen=!card.classList.contains('is-open');
+      if(matchMedia('(max-width:760px)').matches) cards.forEach(c=>setCard(c,false));
+      setCard(card,willOpen);
+      if(willOpen && matchMedia('(max-width:760px)').matches){
+        setTimeout(()=>card.scrollIntoView({behavior:'smooth',block:'nearest'}),80);
+      }
+    });
+  });
+})();

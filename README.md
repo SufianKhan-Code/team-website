@@ -104,3 +104,23 @@ The app can therefore be installed from supported browsers after deployment over
 ## Responsive coverage
 
 The CSS includes additional responsive hardening for wide desktop, laptop/tablet, 760px mobile, 480px small mobile and 360px narrow mobile layouts. Mobile navigation, forms, booking steps, cards, project previews, admin screens and horizontal category/step navigation have specific small-screen behavior.
+
+## Mobile responsive polish (2026-10-03)
+
+This build adds a dedicated `client/assets/mobile-polish.css` layer and improved mobile navigation behavior. It fixes the sticky menu after scrolling, adds consistent side gutters, turns long card lists into swipeable compact rails, makes the home process a 2×2 mobile grid, compacts detailed process phases, rebuilds the footer for phones, and makes service/category sliders full-width and touch-friendly.
+
+
+## Mobile nav + Process page fix
+
+- Mobile header/navigation is now viewport-fixed, so the menu opens from any scroll position on every page.
+- Added a real backdrop and scroll-safe drawer behavior.
+- Updated the PWA service worker to fetch fresh JS/CSS so older cached menu code does not keep reappearing.
+- Rebuilt Process as a compact six-stage workflow. On mobile the detailed stages are accordions, avoiding very tall vertical cards.
+
+
+## Mobile carousel removal update
+
+- Home service/category strip is now a compact 2-column grid instead of a horizontal carousel.
+- Services category navigation uses the full phone width with five fixed tabs and no sideways scrolling.
+- Services pricing cards are full-width compact cards; no card is partially hidden off-screen.
+- Automatic horizontal tab centering was removed because the category navigation is no longer a carousel.

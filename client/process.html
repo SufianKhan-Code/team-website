@@ -6,6 +6,7 @@
   <title>Process — @TEAM</title>
   <meta name="description" content="See how @TEAM plans, designs, develops, tests, launches and supports digital products.">
   <link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/mobile-polish.css">
 
   <!-- @TEAM brand identity / browser / installable app -->
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -40,186 +41,153 @@
 </header>
 
 <main>
-  <section class="process-hero">
+  <section class="process-hero process-hero-v2">
     <div class="container">
       <div class="process-hero-grid">
         <div class="reveal">
           <span class="process-kicker">Our Process / From Brief to Launch</span>
-          <h1>Clear steps.<br>Better delivery.</h1>
+          <h1>From idea<br>to a working product.</h1>
         </div>
         <div class="process-hero-side reveal">
-          <p>We keep projects structured from the first conversation to post-launch support. Every phase has a clear purpose, visible progress and a practical output.</p>
-          <a class="process-text-link" href="#roadmap">See the full workflow <span>↓</span></a>
+          <p>A simple six-stage workflow that keeps scope, design, development, feedback and launch clear from day one.</p>
+          <a class="process-text-link" href="#process-flow">Explore the workflow <span>↓</span></a>
         </div>
       </div>
 
-      <div class="process-overview reveal">
-        <div><strong>06</strong><span>Core phases</span></div>
-        <div><strong>Weekly</strong><span>Progress visibility</span></div>
-        <div><strong>Responsive</strong><span>Tested across devices</span></div>
-        <div class="process-overview-dark"><strong>Launch +</strong><span>Support after delivery</span></div>
+      <div class="process-quick-map reveal" aria-label="Six stage project process">
+        <a href="#phase-1"><i>01</i><strong>Discover</strong><span>Goals & users</span></a>
+        <a href="#phase-2"><i>02</i><strong>Plan</strong><span>Scope & quote</span></a>
+        <a href="#phase-3"><i>03</i><strong>Design</strong><span>UX & interface</span></a>
+        <a href="#phase-4"><i>04</i><strong>Build</strong><span>Development</span></a>
+        <a href="#phase-5"><i>05</i><strong>Test</strong><span>QA & polish</span></a>
+        <a href="#phase-6"><i>06</i><strong>Launch</strong><span>Deploy & support</span></a>
       </div>
     </div>
   </section>
 
-  <section class="process-intro" id="roadmap">
-    <div class="container process-intro-grid">
-      <div class="reveal">
-        <span class="process-kicker">How We Work</span>
-        <h2>A workflow built to reduce confusion.</h2>
-      </div>
-      <div class="process-intro-copy reveal">
-        <p>Instead of jumping straight into code, we define the problem, scope the work and create the right structure first. That keeps design, development and feedback moving in the same direction.</p>
-        <div class="process-pill-row">
-          <span>Clear scope</span><span>Visible milestones</span><span>Regular feedback</span><span>Quality checks</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="process-roadmap">
+  <section class="process-flow-v2" id="process-flow">
     <div class="container">
-      <article class="process-phase reveal">
-        <div class="phase-number">01</div>
-        <div class="phase-copy">
-          <span class="process-kicker">Discover</span>
-          <h2>Understand the business, users and goal.</h2>
-          <p>We start by understanding what you want to build, who will use it and what success should look like.</p>
-          <div class="phase-grid">
-            <div><b>We discuss</b><span>Business goals, audience, required features, references, deadline and budget range.</span></div>
-            <div><b>We clarify</b><span>What is essential for launch and what can be planned for a later phase.</span></div>
-            <div><b>You provide</b><span>Existing brand assets, content, examples, access details and any current system information.</span></div>
-          </div>
-        </div>
-        <aside class="phase-output"><small>OUTPUT</small><strong>Project brief</strong><span>Goals · users · priorities</span></aside>
-      </article>
+      <div class="process-v2-head reveal">
+        <div><span class="process-kicker">The Workflow</span><h2>Six focused stages.<br>No unnecessary complexity.</h2></div>
+        <p>Each stage has a clear purpose and a clear output. On mobile, tap any stage to see the details without scrolling through huge cards.</p>
+      </div>
 
-      <article class="process-phase reveal">
-        <div class="phase-number">02</div>
-        <div class="phase-copy">
-          <span class="process-kicker">Scope & Plan</span>
-          <h2>Turn the idea into a buildable plan.</h2>
-          <p>Once the goal is clear, we break the project into pages, modules, workflows and delivery milestones.</p>
-          <div class="phase-grid">
-            <div><b>Structure</b><span>Pages, user roles, features, dashboard areas and major user flows are listed.</span></div>
-            <div><b>Estimate</b><span>Pricing and timeline are confirmed after the final scope is understood.</span></div>
-            <div><b>Milestones</b><span>The work is organized into practical checkpoints so progress stays easy to review.</span></div>
+      <div class="process-accordion">
+        <article class="process-step-card is-open reveal" id="phase-1">
+          <button class="process-step-toggle" type="button" aria-expanded="true">
+            <span class="process-step-no">01</span><span class="process-step-title"><small>Discover</small><strong>Understand the goal.</strong></span><span class="process-step-plus">−</span>
+          </button>
+          <div class="process-step-body">
+            <p>We understand what you want to build, who will use it and what success should look like.</p>
+            <div class="process-step-points"><span>Business goals & audience</span><span>Required features</span><span>References, deadline & budget</span></div>
+            <div class="process-step-output"><b>Output</b><span>Project brief</span></div>
           </div>
-        </div>
-        <aside class="phase-output"><small>OUTPUT</small><strong>Scope & roadmap</strong><span>Features · milestones · quote</span></aside>
-      </article>
+        </article>
 
-      <article class="process-phase process-phase-dark reveal">
-        <div class="phase-number">03</div>
-        <div class="phase-copy">
-          <span class="process-kicker">UI/UX Design</span>
-          <h2>Shape the experience before development.</h2>
-          <p>For projects that need design work, we organize content, define hierarchy and build interfaces around the user journey.</p>
-          <div class="phase-grid">
-            <div><b>Wireframe</b><span>Key sections and screen structure are planned before visual polish.</span></div>
-            <div><b>Visual direction</b><span>Typography, spacing, components, cards, forms and responsive behavior are defined.</span></div>
-            <div><b>Review</b><span>You review the direction before development moves into the main implementation phase.</span></div>
+        <article class="process-step-card reveal" id="phase-2">
+          <button class="process-step-toggle" type="button" aria-expanded="false">
+            <span class="process-step-no">02</span><span class="process-step-title"><small>Scope & Plan</small><strong>Turn the idea into a roadmap.</strong></span><span class="process-step-plus">+</span>
+          </button>
+          <div class="process-step-body">
+            <p>We break the project into pages, modules, user flows and practical milestones before development begins.</p>
+            <div class="process-step-points"><span>Pages & modules</span><span>Timeline & milestones</span><span>Final scope & quote</span></div>
+            <div class="process-step-output"><b>Output</b><span>Scope + roadmap</span></div>
           </div>
-        </div>
-        <aside class="phase-output"><small>OUTPUT</small><strong>Approved UI direction</strong><span>Layouts · flows · components</span></aside>
-      </article>
+        </article>
 
-      <article class="process-phase reveal">
-        <div class="phase-number">04</div>
-        <div class="phase-copy">
-          <span class="process-kicker">Development</span>
-          <h2>Build the product in working stages.</h2>
-          <p>We turn the approved plan into a responsive, functional product and connect the required frontend, backend and data workflows.</p>
-          <div class="phase-grid">
-            <div><b>Frontend</b><span>Responsive interfaces, interactions, forms, dashboards and reusable components.</span></div>
-            <div><b>Backend</b><span>APIs, authentication, permissions, business logic and integrations when required.</span></div>
-            <div><b>Database</b><span>Data structures and application flows are connected according to project requirements.</span></div>
+        <article class="process-step-card process-step-dark reveal" id="phase-3">
+          <button class="process-step-toggle" type="button" aria-expanded="false">
+            <span class="process-step-no">03</span><span class="process-step-title"><small>UI/UX Design</small><strong>Shape the experience.</strong></span><span class="process-step-plus">+</span>
+          </button>
+          <div class="process-step-body">
+            <p>We organize the content, define hierarchy and build a clear interface direction around the user journey.</p>
+            <div class="process-step-points"><span>Wireframes & structure</span><span>Visual direction</span><span>Responsive behavior</span></div>
+            <div class="process-step-output"><b>Output</b><span>Approved UI direction</span></div>
           </div>
-        </div>
-        <aside class="phase-output"><small>OUTPUT</small><strong>Working build</strong><span>Frontend · backend · data</span></aside>
-      </article>
+        </article>
 
-      <article class="process-phase reveal">
-        <div class="phase-number">05</div>
-        <div class="phase-copy">
-          <span class="process-kicker">Test & Refine</span>
-          <h2>Check the details before launch.</h2>
-          <p>Before handoff, we review the product across the key flows and devices and fix issues that affect usability or delivery quality.</p>
-          <div class="phase-grid">
-            <div><b>Functional testing</b><span>Forms, links, user flows, authentication and important actions are checked.</span></div>
-            <div><b>Responsive testing</b><span>Desktop, tablet and mobile layouts are reviewed for spacing, overflow and interaction issues.</span></div>
-            <div><b>Final polish</b><span>Visual inconsistencies, content issues and approved final refinements are handled.</span></div>
+        <article class="process-step-card reveal" id="phase-4">
+          <button class="process-step-toggle" type="button" aria-expanded="false">
+            <span class="process-step-no">04</span><span class="process-step-title"><small>Development</small><strong>Build in working stages.</strong></span><span class="process-step-plus">+</span>
+          </button>
+          <div class="process-step-body">
+            <p>We turn the approved plan into a responsive working product and connect the required data and business flows.</p>
+            <div class="process-step-points"><span>Frontend & interactions</span><span>Backend & APIs</span><span>Database & integrations</span></div>
+            <div class="process-step-output"><b>Output</b><span>Working build</span></div>
           </div>
-        </div>
-        <aside class="phase-output"><small>OUTPUT</small><strong>Launch-ready product</strong><span>Tested · refined · approved</span></aside>
-      </article>
+        </article>
 
-      <article class="process-phase reveal">
-        <div class="phase-number">06</div>
-        <div class="phase-copy">
-          <span class="process-kicker">Launch & Support</span>
-          <h2>Deploy, hand over and keep it healthy.</h2>
-          <p>We take the approved version live, confirm the production setup and support the next steps after launch.</p>
-          <div class="phase-grid">
-            <div><b>Deployment</b><span>The product is deployed to the agreed hosting environment and production settings are checked.</span></div>
-            <div><b>Handover</b><span>Relevant access, source files and project information are organized for the client.</span></div>
-            <div><b>Ongoing support</b><span>Bug fixes, improvements, new features and maintenance can continue as a separate support service.</span></div>
+        <article class="process-step-card reveal" id="phase-5">
+          <button class="process-step-toggle" type="button" aria-expanded="false">
+            <span class="process-step-no">05</span><span class="process-step-title"><small>Test & Refine</small><strong>Check every important detail.</strong></span><span class="process-step-plus">+</span>
+          </button>
+          <div class="process-step-body">
+            <p>We test the important flows, responsive layouts and final content before the product goes live.</p>
+            <div class="process-step-points"><span>Functional testing</span><span>Mobile & desktop QA</span><span>Final polish</span></div>
+            <div class="process-step-output"><b>Output</b><span>Launch-ready product</span></div>
           </div>
-        </div>
-        <aside class="phase-output"><small>OUTPUT</small><strong>Live product</strong><span>Deploy · handoff · support</span></aside>
-      </article>
+        </article>
+
+        <article class="process-step-card reveal" id="phase-6">
+          <button class="process-step-toggle" type="button" aria-expanded="false">
+            <span class="process-step-no">06</span><span class="process-step-title"><small>Launch & Support</small><strong>Go live with confidence.</strong></span><span class="process-step-plus">+</span>
+          </button>
+          <div class="process-step-body">
+            <p>We deploy the approved product, organize the handoff and stay available for maintenance and future improvements.</p>
+            <div class="process-step-points"><span>Deployment</span><span>Handover</span><span>Ongoing support</span></div>
+            <div class="process-step-output"><b>Output</b><span>Live product</span></div>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section class="process-collab">
+  <section class="process-principles-v2">
     <div class="container">
-      <div class="process-section-head reveal">
-        <div><span class="process-kicker">Communication</span><h2>You should always know what is happening.</h2></div>
-        <p>Good delivery is not only code. We keep decisions, feedback and next steps visible so the project does not become a black box.</p>
+      <div class="process-v2-head reveal">
+        <div><span class="process-kicker">How We Keep It Smooth</span><h2>Clear communication.<br>Fewer surprises.</h2></div>
+        <p>The process stays simple because decisions, feedback and scope changes remain visible throughout the project.</p>
       </div>
-      <div class="collab-grid">
-        <article class="reveal"><span>01</span><h3>One clear point of direction</h3><p>Requirements and feedback are kept focused so implementation does not split into conflicting directions.</p></article>
-        <article class="reveal"><span>02</span><h3>Milestone reviews</h3><p>Important stages are reviewed before the next major phase, reducing expensive late changes.</p></article>
-        <article class="reveal"><span>03</span><h3>Feedback with context</h3><p>We prefer specific feedback tied to the business goal, page, feature or user flow being reviewed.</p></article>
-        <article class="reveal"><span>04</span><h3>Changes stay visible</h3><p>New requests that expand scope are separated from the original agreed work before implementation.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="process-client">
-    <div class="container process-client-grid">
-      <div class="reveal">
-        <span class="process-kicker">What We Need From You</span>
-        <h2>Fast feedback keeps the project moving.</h2>
-      </div>
-      <div class="client-list reveal">
-        <div><span>01</span><p>One clear decision-maker or consolidated feedback from your team.</p></div>
-        <div><span>02</span><p>Content, brand assets and required access shared when needed.</p></div>
-        <div><span>03</span><p>Timely review at design, development and pre-launch checkpoints.</p></div>
-        <div><span>04</span><p>Any new feature request discussed before it is added to the active scope.</p></div>
+      <div class="process-principle-grid">
+        <article class="reveal"><i>01</i><h3>One direction</h3><p>Feedback is consolidated before implementation.</p></article>
+        <article class="reveal"><i>02</i><h3>Milestone reviews</h3><p>Important stages are reviewed before moving ahead.</p></article>
+        <article class="reveal"><i>03</i><h3>Visible scope</h3><p>New requests are separated from the agreed work.</p></article>
+        <article class="reveal"><i>04</i><h3>Responsive QA</h3><p>Key flows are checked across desktop and mobile.</p></article>
       </div>
     </div>
   </section>
 
-  <section class="process-faq">
+  <section class="process-client-v2">
+    <div class="container process-client-v2-grid">
+      <div class="reveal"><span class="process-kicker">What We Need From You</span><h2>Fast feedback keeps the build moving.</h2></div>
+      <div class="process-client-checks reveal">
+        <span><b>01</b> One clear decision-maker or consolidated feedback.</span>
+        <span><b>02</b> Content, brand assets and required access when needed.</span>
+        <span><b>03</b> Timely review at design, build and pre-launch checkpoints.</span>
+        <span><b>04</b> New features discussed before being added to active scope.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="process-faq process-faq-v2">
     <div class="container">
-      <div class="process-section-head reveal">
-        <div><span class="process-kicker">Before We Start</span><h2>Common process questions.</h2></div>
-        <p>Every project is different, but these are the rules we use to keep delivery practical and predictable.</p>
+      <div class="process-v2-head reveal">
+        <div><span class="process-kicker">Before We Start</span><h2>Common questions.</h2></div>
+        <p>Every project is different, but these rules keep delivery predictable.</p>
       </div>
       <div class="process-faq-list">
-        <details class="reveal"><summary>Do all projects go through every phase?<span>+</span></summary><p>No. A small bug fix or deployment task may not need discovery and design at the same depth as a custom business application.</p></details>
-        <details class="reveal"><summary>When is the final price confirmed?<span>+</span></summary><p>After the requirements and scope are clear. More users, modules, reports, integrations, automation or revisions can increase the project scope and price.</p></details>
-        <details class="reveal"><summary>Can the scope change during development?<span>+</span></summary><p>Yes, but new requests are reviewed separately so their impact on price and timeline is clear before they are added.</p></details>
-        <details class="reveal"><summary>Do you support the project after launch?<span>+</span></summary><p>Yes. Ongoing bug fixes, feature work, deployment help and maintenance can continue under the support and maintenance service.</p></details>
+        <details class="reveal"><summary>Do all projects use all six stages?<span>+</span></summary><p>No. Small fixes or deployment tasks may use a shorter version of the process.</p></details>
+        <details class="reveal"><summary>When is the final price confirmed?<span>+</span></summary><p>After the requirements and scope are clear. More modules, integrations, users or revisions can increase the quote.</p></details>
+        <details class="reveal"><summary>Can scope change during development?<span>+</span></summary><p>Yes. New requests are reviewed separately so the impact on price and timeline is clear first.</p></details>
+        <details class="reveal"><summary>Do you support the project after launch?<span>+</span></summary><p>Yes. Maintenance, fixes and future features can continue as a separate support service.</p></details>
       </div>
     </div>
   </section>
 
-  <section class="process-cta">
+  <section class="process-cta process-cta-v2">
     <div class="container process-cta-inner reveal">
       <div><span class="process-kicker">Ready to begin?</span><h2>Bring the idea.<br>We’ll structure the build.</h2></div>
-      <div><p>Tell us what you want to create, what it needs to do and when you want to launch. We’ll start by defining the right scope.</p><a class="btn btn-light" href="start-project.html">Start a Project <span class="arrow">→</span></a></div>
+      <div><p>Tell us what you want to create, what it needs to do and when you want to launch.</p><a class="btn btn-light" href="start-project.html">Start a Project <span class="arrow">→</span></a></div>
     </div>
   </section>
 </main>

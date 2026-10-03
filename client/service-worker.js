@@ -1,7 +1,7 @@
-const CACHE_NAME = 'team-static-v3';
+const CACHE_NAME = 'team-mobile-no-carousels-v10';
 const APP_SHELL = [
   '/', '/index.html', '/services.html', '/work.html', '/about.html', '/process.html', '/contact.html', '/start-project.html',
-  '/assets/style.css', '/assets/app.js', '/favicon.svg', '/favicon.ico', '/manifest.webmanifest', '/offline.html',
+  '/assets/style.css', '/assets/mobile-polish.css', '/assets/app.js', '/favicon.svg', '/favicon.ico', '/manifest.webmanifest', '/offline.html',
   '/assets/brand/favicon-32x32.png', '/assets/brand/apple-touch-icon.png', '/assets/brand/icon-192.png', '/assets/brand/icon-512.png'
 ];
 self.addEventListener('install', event => {
@@ -21,8 +21,14 @@ self.addEventListener('fetch', event => {
     }).catch(async () => (await caches.match(req)) || caches.match('/offline.html')));
     return;
   }
+  if (['style','script'].includes(req.destination)) {
+    event.respondWith(fetch(req).then(res => {
+      const copy = res.clone(); caches.open(CACHE_NAME).then(c => c.put(req, copy)); return res;
+    }).catch(() => caches.match(req)));
+    return;
+  }
   event.respondWith(caches.match(req).then(cached => cached || fetch(req).then(res => {
-    if (res.ok && ['style','script','image','font'].includes(req.destination)) {
+    if (res.ok && ['image','font'].includes(req.destination)) {
       const copy = res.clone(); caches.open(CACHE_NAME).then(c => c.put(req, copy));
     }
     return res;
